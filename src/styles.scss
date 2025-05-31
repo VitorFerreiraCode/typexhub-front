@@ -1,1 +1,281 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* VARIÁVEIS GLOBAIS */
+
+:root {
+    /* Colors */
+    --bg-color: #212832;
+    --bg-color2: #393D46;
+    --bg-color3: #1E1E1E;
+    --bg-header-color: #00ADB4;
+    --bg-button-color: #d6d6d6;
+    --bg-button-color2: #00ADB4;
+    --bg-button-color-hover1: #ababab;
+    --bg-button-color-hover2: #006d71;
+    --text-base-light: #E8E8E8;
+    --text-base-dark: #00ADB4;
+
+    /* Fonts */
+    --font-raleway: "Raleway", sans-serif;
+    --font-inter: 'Inter', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --font-poppins: 'Poppins', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Reset CSS */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+
+body {
+    background-color: #1E1E1E;
+    color: #E8E8E8;
+    font-family: Inter, sans;
+}
+
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+/* GLOBAL STYLES */
+
+.container {
+    max-width: 1800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--bg-color2);
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: var(--bg-color3);
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*titulos*/
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #E8E8E8;
+}
+
+h1, h2, h4, h5 {
+    color: #E8E8E8;
+}
+
+/* LISTAS */
+
+ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* TABELAS */
+
+.table-wrapper {
+    margin-top: 1rem;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    background-color: var(--bg-color3);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--bg-color2);
+    color: var(--text-base);
+}
+
+th {
+    background-color: var(--bg-color2);
+    color: var(--text-base-light);
+}
+
+/* BOTÕES */
+
+.btn {
+    padding: 0.4rem 1rem;
+    margin: 1rem 0 0 0.4rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.btn-add { background-color: #06ac00; color: white; }
+.btn-edit { background-color: #ffc107; color: black; }
+.btn-remove { background-color: #dc3545; color: white; }
+.btn-conclude { background-color: #17a2b8; color: white; }
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* FORMS */
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-base-light);
+}
+
+input[type="text"],
+textarea,
+input[type="file"],
+select {
+    width: 95%;
+    padding: 0.6rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #f8f9fa;
+}
+
+select {
+    width: 50%;
+}
